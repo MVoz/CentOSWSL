@@ -19,7 +19,10 @@ https://github.com/yuk7/ArchWSL
 
 https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu
 
-`diskpart`
+```
+cmd.exe
+diskpart
+```
 
 особое внимание обращаем на права доступа, SD="D:P(A;;GA;;;WD)" , без них будет ошибка, доступ ПОЛНЫЙ для ВСЕх
 
@@ -47,7 +50,11 @@ f:
 
 https://github.com/CentOS/sig-cloud-instance-images/tree/CentOS-7.5.1804/docker
 
-`wget https://github.com/CentOS/sig-cloud-instance-images/blob/CentOS-7.5.1804/docker/centos-7-docker.tar.xz?raw=true`
+
+```
+bash.exe
+wget https://github.com/CentOS/sig-cloud-instance-images/blob/CentOS-7.5.1804/docker/centos-7-docker.tar.xz?raw=true`
+```
 
 распаковываем его в папку tmp
 
