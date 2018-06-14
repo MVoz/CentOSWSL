@@ -7,7 +7,11 @@ https://docs.microsoft.com/en-us/windows/wsl/install-on-server
 
 https://medium.com/@gauravnelson/how-to-run-fedora-with-windows-subsystem-for-linux-wsl-a148902e5087
 
+https://github.com/DDoSolitary/LxRunOffline
+
 https://github.com/RoliSoft/WSL-Distribution-Switcher
+
+ArchWSL
 
 https://github.com/yuk7/ArchWSL
 
@@ -78,3 +82,59 @@ tar -xf LxRunOffline-v2.2.2.zip -C LxRunOffline
 `yum update`
 
 ну и т.д.
+
+
+п.с. если в терминале выходит ошибка, то можно попробывать сделать так
+
+https://github.com/Microsoft/WSL/issues/3020#issuecomment-389662966
+
+только не удалить, а наоборот создать, у меня по крайней мере этого файла небыло, C:\Windows\System32\CodeIntegrity\SIPolicy.p7b, создать пустышку, главное чтоб имя было SIPolicy.p7b
+
+некотрые интересные параметры находятся здесь, HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss
+
+допустим чтобы WSL не брал переменные с Виндовс, а это заложено по умолчанию, можно добавить
+
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss]
+"AppendNtPath"=dword:00000000
+```
+
+ветка с CentOS
+
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss\{8fa2e5cc-b32b-4e49-8e17-333d5e353907}]
+"DistributionName"="CentOS"
+"State"=dword:00000001
+"Version"=dword:00000001
+"BasePath"="F:\\CentOS"
+"DefaultEnvironment"=hex(7):48,00,4f,00,53,00,54,00,54,00,59,00,50,00,45,00,3d,\
+  00,78,00,38,00,36,00,5f,00,36,00,34,00,00,00,4c,00,41,00,4e,00,47,00,3d,00,\
+  72,00,75,00,5f,00,52,00,55,00,2e,00,55,00,54,00,46,00,2d,00,38,00,00,00,50,\
+  00,41,00,54,00,48,00,3d,00,2f,00,75,00,73,00,72,00,2f,00,6c,00,6f,00,63,00,\
+  61,00,6c,00,2f,00,73,00,62,00,69,00,6e,00,3a,00,2f,00,75,00,73,00,72,00,2f,\
+  00,6c,00,6f,00,63,00,61,00,6c,00,2f,00,62,00,69,00,6e,00,3a,00,2f,00,75,00,\
+  73,00,72,00,2f,00,73,00,62,00,69,00,6e,00,3a,00,2f,00,75,00,73,00,72,00,2f,\
+  00,62,00,69,00,6e,00,3a,00,2f,00,73,00,62,00,69,00,6e,00,3a,00,2f,00,62,00,\
+  69,00,6e,00,3a,00,2f,00,75,00,73,00,72,00,2f,00,67,00,61,00,6d,00,65,00,73,\
+  00,3a,00,2f,00,75,00,73,00,72,00,2f,00,6c,00,6f,00,63,00,61,00,6c,00,2f,00,\
+  67,00,61,00,6d,00,65,00,73,00,00,00,54,00,45,00,52,00,4d,00,3d,00,78,00,74,\
+  00,65,00,72,00,6d,00,2d,00,32,00,35,00,36,00,63,00,6f,00,6c,00,6f,00,72,00,\
+  00,00,00,00
+"DefaultUid"=dword:00000000
+"DistributionFlags"=dword:00000007
+"Flags"=dword:00000007
+"KernelCommandLine"="BOOT_IMAGE=/kernel init=/init rw"
+```
+
+
+`DefaultEnvironment = `
+```
+HOSTTYPE=x86_64
+LANG=ru_RU.UTF-8
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+TERM=xterm-256color
+```
