@@ -35,6 +35,46 @@ cd f:
 f:
 ```
 
+дальше подразумевается что уже стоит Ubuntu либо WSL либо в другой системе, в виртуалке или на живой системе
+
+заходим в убунту, bash.exe или по другому, кто как привык
+
+скачиваем дистриб для докера
+
 https://github.com/CentOS/sig-cloud-instance-images/tree/CentOS-7.5.1804/docker
 
 `wget https://github.com/CentOS/sig-cloud-instance-images/blob/CentOS-7.5.1804/docker/centos-7-docker.tar.xz?raw=true`
+
+распаковываем его в папку tmp
+
+```
+mkdir tmp
+tar -xf centos-7-docker.tar.xz -C tmp
+cd tmp
+```
+
+собираем заного с исправлениями, параметр `--ignore-case` обязателен, иначе будут ошибки
+
+`tar -czf ../centos.tar.gz --ignore-case --hard-dereference *`
+
+выходим из убунты, баш, закрываем терминал
+
+скачиваем установщик WSL OS, для удобства
+
+```
+wget https://github.com/DDoSolitary/LxRunOffline/releases/download/v2.2.2/LxRunOffline-v2.2.2.zip
+mkdir LxRunOffline
+tar -xf LxRunOffline-v2.2.2.zip -C LxRunOffline
+```
+
+Установим CentOS
+
+`F:\LxRunOffline\LXRunOffline.exe install -n CentOS -f F:\centos.tar.gz -d F:\CentOS`
+
+Зайдем в БАШ по умолчанию под рутом, другого же пользователя мы еще не сделали
+
+`F:\LxRunOffline\LxRunOffline run -n CentOS -c bash`
+
+`yum update`
+
+ну и т.д.
