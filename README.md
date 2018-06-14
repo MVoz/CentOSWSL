@@ -1,6 +1,14 @@
 # CentOSWSL
  Install CentOS as a WSL Instance (for Windows 10 FCU 64bit or later)
 
+Установка CentOS по мотивам
+
+https://docs.microsoft.com/en-us/windows/wsl/install-on-server
+
+https://medium.com/@gauravnelson/how-to-run-fedora-with-windows-subsystem-for-linux-wsl-a148902e5087
+
+https://github.com/RoliSoft/WSL-Distribution-Switcher
+https://github.com/yuk7/ArchWSL
 
 https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu
 
@@ -23,5 +31,7 @@ assign letter=F
 cd f:
 f:
 ```
+
+https://github.com/CentOS/sig-cloud-instance-images/tree/CentOS-7.5.1804/docker
 
 `wget https://github.com/CentOS/sig-cloud-instance-images/blob/CentOS-7.5.1804/docker/centos-7-docker.tar.xz?raw=true`
