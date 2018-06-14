@@ -8,7 +8,10 @@ https://docs.microsoft.com/en-us/windows/wsl/install-on-server
 https://medium.com/@gauravnelson/how-to-run-fedora-with-windows-subsystem-for-linux-wsl-a148902e5087
 
 https://github.com/RoliSoft/WSL-Distribution-Switcher
+
 https://github.com/yuk7/ArchWSL
+
+Начнем с создания виртуального диска
 
 https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu
 
