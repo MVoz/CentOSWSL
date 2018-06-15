@@ -11,6 +11,8 @@ https://github.com/DDoSolitary/LxRunOffline
 
 https://github.com/RoliSoft/WSL-Distribution-Switcher
 
+https://github.com/Biswa96/WSLInstall
+
 ArchWSL
 
 https://github.com/yuk7/ArchWSL
