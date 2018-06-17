@@ -196,3 +196,11 @@ https://aka.ms/wslstore
     /u, /unregister <имя_дистрибутива> — отменяет регистрацию дистрибутива.
 ```
 
+
+Немного о монтировании работы с ext4 или видимо с другими файловыми системами под WSL
+для работы с разделом ext4 установим - Ext2 Volume Manager for Windows
+
+![2018-06-17_151955](https://user-images.githubusercontent.com/10104740/41506395-8bc836c4-724f-11e8-8618-aa8f9ec735a9.png)
+![2018-06-17_152032](https://user-images.githubusercontent.com/10104740/41506396-8c025f70-724f-11e8-8da6-4b4210bed041.png)
+![2018-06-17_152119](https://user-images.githubusercontent.com/10104740/41506397-8c37f982-724f-11e8-8b8e-18197bf3a419.png)
+![2018-06-17_152230](https://user-images.githubusercontent.com/10104740/41506398-8c76ed9a-724f-11e8-8d5f-2cf5b02f9f3c.png)
