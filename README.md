@@ -105,6 +105,12 @@ https://github.com/Microsoft/WSL/issues/3020#issuecomment-389662966
 
 допустим чтобы WSL не брал переменные с Виндовс, а это заложено по умолчанию, можно добавить
 
+согласно документу
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/mt826872%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396
+
+надо поставить в десятичной цифру 5
+
 ```
 Windows Registry Editor Version 5.00
 
