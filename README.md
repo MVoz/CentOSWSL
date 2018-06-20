@@ -13,6 +13,8 @@ https://github.com/RoliSoft/WSL-Distribution-Switcher
 
 https://github.com/Biswa96/WSLInstall
 
+https://github.com/x-distro/x.distro
+
 ArchWSL
 
 https://github.com/yuk7/ArchWSL
