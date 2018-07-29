@@ -31,8 +31,8 @@ diskpart
 особое внимание обращаем на права доступа, SD="D:P(A;;GA;;;WD)" , без них будет ошибка, доступ ПОЛНЫЙ для ВСЕх
 
 ```
-create vdisk file=J:\windows.vhdx maximum=100000 type=expandable SD="D:P(A;;GA;;;WD)"
-select vdisk file=J:\windows.vhdx
+create vdisk file=J:\wsl.vhdx maximum=100000 type=expandable SD="D:P(A;;GA;;;WD)"
+select vdisk file=J:\wsl.vhdx
 attach vdisk
 create partition primary active
 format fs=ntfs quick label="WSL"
