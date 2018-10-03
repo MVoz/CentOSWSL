@@ -96,6 +96,12 @@ tar -xf LxRunOffline-v2.2.2.zip -C LxRunOffline
 
 **ВАЖНО**, после манипуляций с реестром, а именно добавления на чистую машину дистрибютивов *unix, надо перезапустить сервис **LxssManager** , чтобы он подхватил окружение 
 
+sc query LxssManager
+
+sc stop LxssManager
+
+sc start LxssManager
+
 _п.с. сам с этим столкнулся и озадачился ;)_
 
 
